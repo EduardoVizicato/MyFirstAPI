@@ -6,9 +6,8 @@ namespace MyFirstAPI.Data
 {
     public class TaskSystemDBContext : DbContext
     {
-        public TaskSystemDBContext(DbContextOptions<TaskSystemDBContext> options) : base(options)  
+        public TaskSystemDBContext(DbContextOptions<TaskSystemDBContext> options) : base(options)
         {
-                
         }
 
         public DbSet<UserModel> Users { get; set; } 
