@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyFirstAPI.Data;
 
@@ -11,9 +12,11 @@ using MyFirstAPI.Data;
 namespace MyFirstAPI.Migrations
 {
     [DbContext(typeof(TaskSystemDBContext))]
-    partial class TaskSystemDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240321175325_LinkTaskToUser")]
+    partial class LinkTaskToUser
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

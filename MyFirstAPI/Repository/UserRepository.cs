@@ -14,8 +14,8 @@ namespace MyFirstAPI.Repository
         }
         public async Task<UserModel> AddUser(UserModel user)
         {
-           _dbContext.Add(user);
-            _dbContext.SaveChanges();
+           await _dbContext.AddAsync(user);
+           await _dbContext.SaveChangesAsync();
 
             return user;
         }
