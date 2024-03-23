@@ -22,7 +22,7 @@ namespace MyFirstAPI.Repository
         public async Task<bool> DeleteTask(int id)
         {
             TaskModel taskById = await GetTaskById(id);
-            if (taskById != null)
+            if (taskById == null)
             {
                 throw new Exception($"Tarefa para o ID: {id} não encontrada no banco de dados");
             }
@@ -44,7 +44,7 @@ namespace MyFirstAPI.Repository
         public async Task<TaskModel> UpdateTask(TaskModel Task, int id)
         {
             TaskModel taskById = await GetTaskById(id);
-            if (taskById != null)
+            if (taskById == null)
             {
                 throw new Exception($"Tarefa para o ID: {id} não encontrada no banco de dados");
             }
